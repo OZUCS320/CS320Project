@@ -1,0 +1,25 @@
+Me and Hussam made a meeting. We have discussed on some main points. Here are the output we want from our "database management library program" and the distribution of roles.
+-----------------------------------------------------------------------------------------------------------------------
+This will be the output!!:
+
+welcome, enter the password
+3 options: 
+1) admin 
+2) student
+//3) quit
+admin can add delete create
+studant can view
+
+if you choose admin you can both display or add or delete
+
+ADMÝN FUNCTION --> enter password + 5 options: 1. search for a book 2. search the student 3. enter a new book 4. enter new student 5. list all the students 6. list all the books 7. go back to the previous menu 8. (we have to discuss this) delete student / book
+
+Student Funtion --> 1. search for a book 2. search the student 3. request book? 4. go back to the previous menu
+
+------------------------------------------------------------------------------------------------------------------------
+   Distribution of roles
+Those roles are not strictly seperated. Anyone can edit the other's work. We will meet and combine our jobs. Thats why everyone has to know each others work.
+ 
+Hussam - Aras : will create all the necessary functions, will not implement them. link classes to each other.
+
+Beda-Daniyal-Ammar : will implement the certain functions. 
