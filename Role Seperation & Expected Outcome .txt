@@ -23,3 +23,12 @@ Those roles are not strictly seperated. Anyone can edit the other's work. We wil
 Hussam - Aras : will create all the necessary functions, will not implement them. link classes to each other.
 
 Beda-Daniyal-Ammar : will implement the certain functions. 
+
+------------------------------------------------------------------------------------------------------------------------
+SDP Job Split
+
+Beda - 1 st Question
+Aras Hussam - 2 and 3 rd
+Ammar Daniyak - 4 th 
+
+Deadline is Wednesday 10 am.
