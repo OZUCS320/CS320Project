@@ -1,0 +1,45 @@
+ There is still imbalanced workload distribution. 
+ Beda should provide more contribution for the documents; more than just the introductory sections. 
+ + Section 2.2: These tests are not unit tests; no code will be written for these tests. 
+ Test cases include tests steps that are written from the user point of view and describe how the system is used from outside 
+ and what output should be observed at the end. Word, Office, Argo UML are all irrelevant.
+ + For the same reason, database tests are also not relevant. The goal is to test system functions as a whole.
+ We do not consider internal details at the moment.
+ + Section 2.3: introduce the admin user to the database? Otherwise how will you start testing?
+ + There should be a test case for each system requirement. Operator actions must be step by step and dedicated for testing a feature. 
+ So, such a description for operator actions is not acceptable: “Performing all admin functions for e.g. searching a book,
+ searching a student, adding a new book.”
+ A test case can include: login as admin -> search an existing book ; outcome: see that book appears in the list of results.
+ Another test case: login as admin -> search a missing book ; outcome: see a message like no such a book was found. 
+ Another one: login as admin -> display the list of students
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
