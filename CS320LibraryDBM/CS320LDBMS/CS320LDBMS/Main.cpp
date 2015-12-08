@@ -2,10 +2,9 @@
 
 using namespace std;
 
-
 int main() {
 
-	cout << "Welcome Team!" << endl;
+	cout << "Welcome Team! " << endl;
 
 	return 0;
 }

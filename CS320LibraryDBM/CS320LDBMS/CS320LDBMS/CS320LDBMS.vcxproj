@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E0231A28-3B46-48F6-B20D-A0CC4612B7CE}</ProjectGuid>
+    <ProjectGuid>{0FB76A18-D1CC-4567-8121-D25602CAE57F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>CS320LibraryDBM</RootNamespace>
+    <RootNamespace>CS320LDBMS</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
