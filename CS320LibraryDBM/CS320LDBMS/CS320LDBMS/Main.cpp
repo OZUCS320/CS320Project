@@ -46,12 +46,12 @@ void menu() {
 		}
 		checkUsersChoice(usersChoice);
 		
-		OPTION:cout << endl << "Do You Want To Start Over (Y / N)?(CASE SENSITIVE) ";
+		OPTION:cout << endl << "Do You Want To Start Over (Y / N)?";
 		cin >> option;;
-		if (option == "Y") {
+		if (option == "Y" || option == "y") {
 			continue;
 		}
-		else if (option == "N") {
+		else if (option == "N" || option == "n") {
 			cout << "Thanks For Using Our Program! " << endl;
 			break;
 		}
@@ -82,5 +82,5 @@ void checkUsersChoice(int usersChoice) {
 
 void systemInformation() {
 	
-	cout << "This is a Library Program" << endl; // TODO: Write an introduction about the program and what it does.
+	cout << "This is a library management program that helps user ... that is written by..." << endl; // TODO: Write an introduction about the program and what it does.
 }
