@@ -8,6 +8,34 @@ AdminOption::~AdminOption()
 {
 }
 
+void AdminOption::addBook(){
+	string bookName, author, ISBN, year;
+	ofstream Book;
+	
+	cout << "Enter books's name: " << endl;
+	getline(cin, bookName);
+	
+	cout << "Enter books's author: " << endl;
+	getline(cin, author);
+	
+	cout << "Enter books's ISBN: " << endl;
+	getline(cin, ISBN);
+	
+	cout << "Enter books's year: " << endl;
+	getline(cin, year);
+	
+	Book.open("book.txt", ios::app);
+	
+	if(Book.is_open()){
+	Book << bookName << "$" << author << "$" << ISBN << "$" << year << endl;	
+	}
+	else {
+		cout << "Can't axess database!! " << endl;
+	}
+	
+	Book.close();
+}
+
 void AdminOption::deleteStudent(Student a)
 {
 	// delete student from database (I don't know how to deal with database. So this will be your part)
