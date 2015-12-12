@@ -16,6 +16,7 @@ public:
 	AdminOption();
 	~AdminOption();
 	
+	void addStudent();
 	void addBook();
 	void deleteStudent(Student);
 	void deleteBook(Book);

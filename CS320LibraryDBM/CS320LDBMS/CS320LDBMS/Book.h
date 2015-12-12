@@ -19,14 +19,14 @@ public:
 	void setLoan(bool);
 	string getName();
 	string getAuthor();
-	string getID();
+	string getISBN();
 	string getYear();
 	bool getLoan();
 
 private:
 	string name;
 	string author;
-	string id;
+	string isbn;
 	string year;
 	bool isOnLoan;
 

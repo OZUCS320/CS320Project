@@ -5,11 +5,11 @@ Book::Book()
 	this->isOnLoan = false;
 }
 
-Book::Book(string name, string author, string id, string year)
+Book::Book(string name, string author, string isbn, string year)
 {
 	this->name = name;
 	this->author = author;
-	this->id = id;
+	this->isbn = isbn;
 	this->year = year;
 	this->isOnLoan = false;
 }
@@ -30,7 +30,7 @@ void Book::setAuthor(string author)
 
 void Book::setID(string id)
 {
-	this->id = id;
+	this->isbn = isbn;
 }
 
 void Book::setYear(string year)
@@ -53,9 +53,9 @@ string Book::getAuthor()
 	return author;
 }
 
-string Book::getID()
+string Book::getISBN()
 {
-	return id;
+	return isbn;
 }
 
 string Book::getYear()

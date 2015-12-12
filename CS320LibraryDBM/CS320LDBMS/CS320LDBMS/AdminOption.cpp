@@ -8,6 +8,34 @@ AdminOption::~AdminOption()
 {
 }
 
+void AdminOption::addStudent()
+{
+	string name, surname, ID, email;
+	ofstream Student;
+
+	cout << "Enter student's name: " << endl;
+	getline(cin, name);
+
+	cout << "Enter student's surname: " << endl;
+	getline(cin, surname);
+
+	cout << "Enter student's ID: " << endl;
+	getline(cin, ID);
+
+	cout << "Enter students's email: " << endl;
+	getline(cin, email);
+
+	Student.open("student.txt", ios::app);
+
+	if (Student.is_open()) {
+		Student << name << "$" << surname << "$" << ID << "$" << email << endl;
+	}
+	else {
+		cout << "Can't axess database!! " << endl;
+	}
+	Student.close();
+}
+
 void AdminOption::addBook(){
 	string bookName, author, ISBN, year;
 	ofstream Book;
@@ -32,8 +60,10 @@ void AdminOption::addBook(){
 	else {
 		cout << "Can't axess database!! " << endl;
 	}
+
 	
 	Book.close();
+	
 }
 
 void AdminOption::deleteStudent(Student a)
