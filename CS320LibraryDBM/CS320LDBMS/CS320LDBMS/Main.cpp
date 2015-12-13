@@ -1,7 +1,7 @@
 #include"Student.h"
 #include"Admin.h"
 #include"SignUp.h"
-
+#include "LogIn.h"
 using namespace std;
 
 void menu();
@@ -9,7 +9,6 @@ void checkUsersChoice(int);
 void systemInformation();
 
 int main() {
-
 	menu();
 
 	string name, surname, id, email;
@@ -75,7 +74,8 @@ void checkUsersChoice(int usersChoice) {
 			break;
 		case 2: // Create a class for signing in as admin
 			break;
-		case 3: SignUp signUpForm;// Create a class for signing in as student
+		case 3: SignUp signUpForm; 
+			LogIn logInForm;// Create a class for signing in as student
 			break;
 		}
 	}
