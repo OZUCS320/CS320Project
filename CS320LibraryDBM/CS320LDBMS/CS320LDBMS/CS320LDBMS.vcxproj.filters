@@ -30,6 +30,9 @@
     <ClCompile Include="AdminOption.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SignUp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Student.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AdminOption.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SignUp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

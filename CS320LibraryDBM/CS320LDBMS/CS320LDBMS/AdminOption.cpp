@@ -88,7 +88,7 @@ void AdminOption::changeBookInfo(Book book)
 	int a;
 	string oldname = book.getName();
 	string olauthor = book.getAuthor();
-	string oldid = book.getID();
+	string oldid = book.getISBN();
 	string oldyear = book.getYear();
 	cout << "What wrong information would you like to change in the book named: " << book.getName() << endl;
 	cout << "press 1 for name" << endl;

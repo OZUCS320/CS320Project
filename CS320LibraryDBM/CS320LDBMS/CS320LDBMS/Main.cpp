@@ -1,5 +1,6 @@
 #include"Student.h"
 #include"Admin.h"
+#include"SignUp.h"
 
 using namespace std;
 
@@ -74,7 +75,7 @@ void checkUsersChoice(int usersChoice) {
 			break;
 		case 2: // Create a class for signing in as admin
 			break;
-		case 3: // Create a class for signing in as student
+		case 3: SignUp signUpForm;// Create a class for signing in as student
 			break;
 		}
 	}
