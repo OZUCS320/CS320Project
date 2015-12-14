@@ -9,17 +9,9 @@ void checkUsersChoice(int);
 void systemInformation();
 
 int main() {
+
 	menu();
-
-	string name, surname, id, email;
-	cin >> name >> surname >> id >> email;
-
-	Admin a1 = Admin(name, surname, id,email);
-	Student s1 = Student(name, surname, id, email);
-
-	a1.print();
-	s1.print();
-
+	
 	return 0;
 }
 
@@ -74,8 +66,21 @@ void checkUsersChoice(int usersChoice) {
 			break;
 		case 2: // Create a class for signing in as admin
 			break;
-		case 3: SignUp signUpForm; 
-			LogIn logInForm;// Create a class for signing in as student
+		case 3: cout << "1. Sign In As a Student. " << endl;
+				cout << "2. Sign Up As a New Student. " << endl;
+				int choice;
+				cin >> choice;
+
+				if (choice == 1) {
+					LogIn logInForm;
+				}
+				else if (choice == 2) {
+					SignUp signUpForm;
+				}
+				else{
+					cout << "Wrong Input! " << endl;
+				}
+
 			break;
 		}
 	}

@@ -12,14 +12,12 @@ public:
 
 	LogIn();
 	~LogIn();
+
 	void LogInSetter(string, string);
+
 private:
 	string id;
 	string password;
 };
-
-
-
-
 
 #endif

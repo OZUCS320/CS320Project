@@ -16,19 +16,9 @@ public:
 	AdminOption();
 	~AdminOption();
 	
-	void addStudent();
-	void addBook();
-	void deleteStudent(Student);
-	void deleteBook(Book);
-	void loanSetter(Book);
-	void changeBookInfo(Book);
-	void changeStudentInfo(Student);
-	
-
+	void adminMenu();
 
 private:
-
-
 
 };
 #endif

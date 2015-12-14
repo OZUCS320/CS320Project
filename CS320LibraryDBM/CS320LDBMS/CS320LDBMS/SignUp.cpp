@@ -6,14 +6,17 @@ SignUp::SignUp() {
 	cout << "\t\t\t\t Sign Up Form " << endl << endl;
 	
 	cout << "Enter Your User Name: " << endl;
-	cin.ignore();
-	getline(cin, newName);
+	cin >> newName;
+	cin.ignore(); // change this!
 	cout << "Enter Your Password: " << endl;
-	getline(cin, newPassword);
+	cin >> newPassword;
+	cin.ignore(); // change this!
 	cout << "Enter Your Email: " << endl;
-	getline(cin, newEmail);
+	cin >> newEmail;
+	cin.ignore(); // change this!
 	cout << "Enter Your ID: " << endl;
-	getline(cin, newId);
+	cin >> newId;
+	cin.ignore(); // change this!
 	cout << "----------------------------------------------------------------" << endl;
 
 	name = newName; password = newPassword; email = newEmail; id = newId;
@@ -28,5 +31,5 @@ void SignUp::sendToDatabase(string newName, string newPassword, string newEmail,
 	ofstream signUpRequests;
 	signUpRequests.open("signUp.txt", ios::app);
 
-	signUpRequests << newName << "$" << newPassword << "$" << newEmail << "$" << newId << endl;
+	signUpRequests << newName << " " << newPassword << " " << newEmail << " " << newId << endl;
 }
