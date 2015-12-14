@@ -13,10 +13,11 @@ public:
 	Admin();
 	~Admin();
 
-	void signInAsAdmin();
+	void signInAsAdmin(string, string);
 
 private:
-	
+	string id;
+	string password;
 };
 
 #endif 

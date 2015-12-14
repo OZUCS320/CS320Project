@@ -1,7 +1,7 @@
 #include"Student.h"
 #include"Admin.h"
 #include"SignUp.h"
-#include "LogIn.h"
+#include"LogIn.h"
 #include"AdminOption.h"
 
 using namespace std;
@@ -66,8 +66,9 @@ void checkUsersChoice(int usersChoice) {
 		switch (usersChoice){
 		case 1:  systemInformation();
 			break;
-		case 2: // Create a class for signing in as admin
-			break;
+		case 2: {cout << "\t\t Welcome To Admin Panel " << endl;
+			Admin admin;
+			break; }
 		case 3: cout << "1. Sign In As a Student. " << endl;
 				cout << "2. Sign Up As a New Student. " << endl;
 				int choice;
