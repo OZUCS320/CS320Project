@@ -3,6 +3,7 @@
 #include"SignUp.h"
 #include"LogIn.h"
 #include"AdminOption.h"
+#include"Book.h"
 
 using namespace std;
 
@@ -91,6 +92,10 @@ void checkUsersChoice(int usersChoice) {
 }
 
 void systemInformation() {
-	
-	cout << "This is a library management program that helps user ... that is written by..." << endl; // TODO: Write an introduction about the program and what it does.
+
+	cout << "LDBMS is a library management system that helps users to"
+		"borrow, return or search for books in the school's available "
+		"database, this program was written by five contributers from "
+		"ozyegin university (ozyegin.edu.tr), the progeam can " 
+		"downloaded from github (https://github.com/OZUCS320/CS320Project). "<< endl;
 }
