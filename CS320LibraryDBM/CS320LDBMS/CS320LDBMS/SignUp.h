@@ -4,6 +4,7 @@
 #include<fstream>
 #include<iostream>
 #include<string>
+#include<algorithm>
 
 using namespace std;
 
@@ -13,7 +14,8 @@ public:
 	~SignUp();
 
 	void sendToDatabase(string, string, string, string);
-	
+	string removeSpaces(string);
+
 private:
 	string name;
 	string password;

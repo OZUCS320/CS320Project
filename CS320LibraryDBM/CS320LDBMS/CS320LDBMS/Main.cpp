@@ -2,6 +2,8 @@
 #include"Admin.h"
 #include"SignUp.h"
 #include "LogIn.h"
+#include"AdminOption.h"
+
 using namespace std;
 
 void menu();
@@ -82,6 +84,7 @@ void checkUsersChoice(int usersChoice) {
 				}
 
 			break;
+		default: cout << "Wrong Input! " << endl;
 		}
 	}
 }

@@ -17,6 +17,7 @@ public:
 	~AdminOption();
 	
 	void adminMenu();
+	void adminRequestApprove();
 
 private:
 

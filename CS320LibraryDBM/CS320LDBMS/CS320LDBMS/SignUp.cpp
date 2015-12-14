@@ -6,20 +6,17 @@ SignUp::SignUp() {
 	cout << "\t\t\t\t Sign Up Form " << endl << endl;
 	
 	cout << "Enter Your User Name: " << endl;
-	cin >> newName;
-	cin.ignore(); // change this!
+	cin.ignore();
+	getline(cin, newName);
 	cout << "Enter Your Password: " << endl;
-	cin >> newPassword;
-	cin.ignore(); // change this!
+	getline(cin, newPassword);
 	cout << "Enter Your Email: " << endl;
-	cin >> newEmail;
-	cin.ignore(); // change this!
+	getline(cin, newEmail);
 	cout << "Enter Your ID: " << endl;
-	cin >> newId;
-	cin.ignore(); // change this!
+	getline(cin, newId);
 	cout << "----------------------------------------------------------------" << endl;
 
-	name = newName; password = newPassword; email = newEmail; id = newId;
+	name = removeSpaces(newName); password = removeSpaces(newPassword); email = removeSpaces(newEmail); id = removeSpaces(newId);
 	sendToDatabase(name, password, email, id);
 }
 
@@ -32,4 +29,10 @@ void SignUp::sendToDatabase(string newName, string newPassword, string newEmail,
 	signUpRequests.open("signUp.txt", ios::app);
 
 	signUpRequests << newName << " " << newPassword << " " << newEmail << " " << newId << endl;
+}
+
+string SignUp::removeSpaces(string input){
+
+	input.erase(remove_if(input.begin(), input.end(), isspace), input.end());
+	return input;
 }
