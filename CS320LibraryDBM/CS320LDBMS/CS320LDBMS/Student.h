@@ -15,7 +15,6 @@ public:
 	void studentMenu();
 	void viewAllBooks();
 	void searchBook();
-	void borrowBook();
 
 	
 private:
