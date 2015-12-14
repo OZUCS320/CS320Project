@@ -3,19 +3,26 @@
 
 #include<iostream>
 #include<string>
-#include<fstream>
 
 using namespace std;
 
-class Student{
+class Student {
 public:
+
 	Student();
+	Student(string, string, string, string);
 	~Student();
-
 	void studentMenu();
+	void viewAllBooks();
+	void searchBook();
+	void borrowBook();
 
-private:
 	
+private:
+	string name;
+	string surname;
+	string ID;
+	string email;
 };
 
 #endif
