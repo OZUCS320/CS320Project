@@ -1,15 +1,15 @@
 #include"Admin.h"
 
 Admin::Admin() {
-	//string newId, newPassword;
-	//cout << "Admin ID: " << endl;
-	//cin.ignore();
-	//getline(cin, newId);
-	//cout << "Admin Password: " << endl;
-	//getline(cin, newPassword);
+	string newId, newPassword;
+	cout << "Admin ID: " << endl;
+	cin.ignore();
+	getline(cin, newId);
+	cout << "Admin Password: " << endl;
+	getline(cin, newPassword);
 
-	//id = newId; password = newPassword;
-	//signInAsAdmin(id, password);
+	id = newId; password = newPassword;
+	signInAsAdmin(id, password);
 }
 
 Admin::~Admin() {
@@ -26,7 +26,6 @@ void Admin::signInAsAdmin(string newId, string newPassword) {
 		adminDb >> ID >> pass;
 		if (ID == newId && pass == newPassword) {
 			cout << "Successfully Signed In! " << endl;
-			// call the admin menu from adminOption when implemented
 			AdminOption *adminoption = new AdminOption();
 			adminoption->adminMenu();
 
