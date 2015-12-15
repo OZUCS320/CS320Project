@@ -94,7 +94,6 @@ void Student::searchBook()
 
 	string bookName;
 	
-	/*std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');*/
 	string userOption = "";
 	cout << "\nEnter the name of the book you want to search: ";
 	cin.ignore();  //For flushing the input buffer
