@@ -36,20 +36,20 @@ void Book::BorrowBook(string studentsName) {
 
 	string booksName;
 	cout << "please enter the book's name to be borrowed: " << endl;
-	cin >> booksName;
+	cin.ignore();
+	getline(cin, booksName);
 	bool available = false;
 	available = searchForBook(booksName);
-	if (available = true) {
-		cout << "test passed" << endl;
+	if (available == true) {
+		fstream borrowedBooks;
+		borrowedBooks.open("borrowedBooks.txt", ios::app | ios::in);
+
+		borrowedBooks << studentsName << " Borrowed: " <<booksName << endl;
+		cout << "Book Borrowed Successfully by: " << studentsName << endl;
 	}
 	else {
-		cout << "Test failed " << endl;
+		cout << "Book Is Not Available in Our Library" << endl;
 	}
-
-	fstream borrowedBooks;
-	borrowedBooks.open("borrowedBooks.txt", ios::app | ios::in);
-	//need to finish the borrowwing method
-
 }
 
 void Book::returnBook(string studentsName) {
@@ -65,25 +65,27 @@ bool Book::searchForBook(string booksName)
 {
 	ifstream searchBooks;
 	searchBooks.open("books.txt");
-
-	/*std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');*/
-	string userOption = "";
+	string bookFromLibrary;
 
 	if (searchBooks.is_open()) {
-		while (getline(searchBooks, booksName)) {
-			if (booksName == userOption && booksName != " ") {
-				cout << "Book Found : " << userOption << endl;
+		while (!searchBooks.eof()) {
+			getline(searchBooks, bookFromLibrary);
+			//bookFromLibrary.push_back('\n');
+			//cout << bookFromLibrary;
+			if (booksName.compare(bookFromLibrary) == 0) {
+				cout << "Book Found : " << bookFromLibrary << endl;
+				searchBooks.close();
 				return true;
+				break;
 			}
 		}
 		searchBooks.close();
-		cout << "\nBook Not Found!" << endl;
-		cout << "Make sure you are entering the name correctly.";
 		return false;
 	}
 	else {
 		cout << "Unable to open file";
 		return false;
 	}
+	return false;
 }
 

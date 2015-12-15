@@ -28,7 +28,8 @@ void LogIn::LogInSetter(string newId, string newPassword) {
 		students >> name >> password >> email >> id;
 		if (newId == id && newPassword == password){
 			cout << "Successfully Signed In As a Student! " << endl;
-			// call the student menu when it is implemented
+			Student student(name, id);
+			student.studentMenu();
 		}
 		else if (students.eof() && newId == id && newPassword == password){
 			cout << "Invalid Credentials!! " << endl; // TODO consider a better implementation

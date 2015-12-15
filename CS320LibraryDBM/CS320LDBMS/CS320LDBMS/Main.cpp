@@ -14,7 +14,7 @@ void systemInformation();
 int main() {
 
 	menu();
-	
+
 	return 0;
 }
 

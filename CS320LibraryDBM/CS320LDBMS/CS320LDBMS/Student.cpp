@@ -9,10 +9,8 @@ Student::Student()
 
 Student::Student(string newName, string newID)
 {
-	this->name = newName;	
+	this->name = newName;
 	this->ID = newID;
-
-
 }
 
 Student::~Student()
@@ -93,6 +91,7 @@ void Student::searchBook()
 
 	string bookName;
 	
+	/*std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');*/
 	string userOption = "";
 	cout << "\nEnter the name of the book you want to search: ";
 	cin.ignore();  //For flushing the input buffer
