@@ -13,7 +13,8 @@ void AdminOption::adminMenu() {
 		cout << "\nWelcome to the admin menu" << endl;
 		cout << "You can select any option from the following menu : \n" << endl;
 		cout << " 1) Add a book" << endl;
-		cout << " 2) Search book\n" << endl;
+		cout << " 2) Search book" << endl;
+		cout << " 3) Approve request of students\n" << endl;
 		
 		cout << "Enter your choice: ";
 		int choice;
@@ -28,6 +29,13 @@ void AdminOption::adminMenu() {
 		else if (choice == 2) {
 			searchBook();
 
+		}
+		else if (choice == 3) {
+			adminRequestApprove();
+		}
+		else {
+			cout << "Invalid choice made. You will be returned back to the main menu" << endl;
+			adminMenu();
 		}
 
 
