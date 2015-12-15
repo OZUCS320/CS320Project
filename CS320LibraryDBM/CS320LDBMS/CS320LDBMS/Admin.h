@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class Admin{
+class Admin {
 public:
 	Admin();
 	~Admin();
