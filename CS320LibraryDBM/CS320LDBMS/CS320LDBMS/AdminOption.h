@@ -1,22 +1,27 @@
-#ifndef ADMIN_H
-#define ADMIN_H
+#include <iostream>
+#include <string>
+#include <fstream>
 
-#include<iostream>
-#include<string>
-#include<fstream>
+#include "Admin.h"
+//#include "Book.h"
+//#include "Student.h"
+
+#ifndef ADMINOPTION_H
+#define ADMINOPTION_H
 
 using namespace std;
 
-class Admin {
+class AdminOption {
 public:
-	Admin();
-	~Admin();
+	AdminOption();
+	~AdminOption();
 
-	void signInAsAdmin(string, string);
+	void adminMenu();
+	void adminRequestApprove();
+	void addBook();
+	void searchBook();
 
 private:
-	string id;
-	string password;
-};
 
-#endif 
+};
+#endif
