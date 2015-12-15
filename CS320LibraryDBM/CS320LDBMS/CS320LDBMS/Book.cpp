@@ -54,11 +54,23 @@ void Book::BorrowBook(string studentsName) {
 
 void Book::returnBook(string studentsName) {
 	bool available = false;
-	string name;
+	string booksName;
 	cout << "Enter the name of the book to be returned " << endl;
-	cin >> name;
-	available = true;
-	// need to be implemented correctly
+	cin.ignore();
+	getline(cin, booksName);
+
+	fstream returnBooks;
+	returnBooks.open("borrowedBooks.txt", ios::in | ios::app);
+	
+	string name, status, bName;
+	returnBooks >> name >> status >> bName; // fix the white space error
+
+	if (booksName == bName) {
+		//delete the book
+	}
+	else{
+		cout << "No book that matches the input in library. " << endl;
+	}
 }
 
 bool Book::searchForBook(string booksName)
