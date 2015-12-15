@@ -44,7 +44,7 @@ void Book::BorrowBook(string studentsName) {
 		fstream borrowedBooks;
 		borrowedBooks.open("borrowedBooks.txt", ios::app | ios::in);
 
-		borrowedBooks << studentsName << " Borrowed: " <<booksName << endl;
+		borrowedBooks << studentsName << " Borrowed:" <<booksName << endl;
 		cout << "Book Borrowed Successfully by: " << studentsName << endl;
 	}
 	else {
@@ -53,24 +53,32 @@ void Book::BorrowBook(string studentsName) {
 }
 
 void Book::returnBook(string studentsName) {
-	bool available = false;
 	string booksName;
 	cout << "Enter the name of the book to be returned " << endl;
 	cin.ignore();
 	getline(cin, booksName);
+	booksName = " " + booksName;
 
-	fstream returnBooks;
-	returnBooks.open("borrowedBooks.txt", ios::in | ios::app);
+	fstream borrowedBooks;
+	borrowedBooks.open("borrowedBooks.txt", ios::in);
+	fstream returnedBooks;
+	returnedBooks.open("returnedBooks.txt", ios::app);
 	
 	string name, status, bName;
-	returnBooks >> name >> status >> bName; // fix the white space error
+	 	while (!borrowedBooks.eof()) {
+		borrowedBooks >> name >> status; // fix the white space error
+		getline(borrowedBooks, bName);
 
-	if (booksName == bName) {
-		//delete the book
+		if (booksName == bName && studentsName == name) { 
+			status = "Returned:";
+			returnedBooks << name << " " << status << " " << bName << endl;
+			cout << "Returned Successfully! " << endl;
+			return;
+		}
 	}
-	else{
 		cout << "No book that matches the input in library. " << endl;
-	}
+		returnedBooks.close();
+		borrowedBooks.close();
 }
 
 bool Book::searchForBook(string booksName)
