@@ -7,12 +7,11 @@ Student::Student()
 
 }
 
-Student::Student(string newName, string newSurname, string newID, string newEmail)
+Student::Student(string newName, string newID)
 {
-	this->name = newName;
-	this->surname = newSurname;
+	this->name = newName;	
 	this->ID = newID;
-	this->email = newEmail;
+
 
 }
 

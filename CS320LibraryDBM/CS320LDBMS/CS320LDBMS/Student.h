@@ -11,7 +11,7 @@ class Student {
 public:
 
 	Student();
-	Student(string, string, string, string);
+	Student(string, string);
 	~Student();
 	void studentMenu();
 	void viewAllBooks();
