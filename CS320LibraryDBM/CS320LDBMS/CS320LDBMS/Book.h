@@ -4,25 +4,21 @@
 #include<iostream>
 #include<string>
 #include <fstream>
+#include"Student.h"
 
 using namespace std;
 
 class Book {
 public:
-	Book();
-	Book(string, string, string);
+	Book(string);
 	~Book();
-	bool BookInformation();
-	void BorrowBook();
-	void checkAvailability();
-	void bookMenu();
-	void returnBook();
+	void BorrowBook(string);
+	void bookMenu(string);
+	void returnBook(string);
+
+	bool searchForBook(string);
 
 private:
-
-	string name;
-	string ISBN;
-	string year;
-
+	
 };
 #endif

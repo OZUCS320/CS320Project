@@ -26,7 +26,7 @@ void Student::studentMenu()
 	cout << "\nWelcome to the Student Menu" << endl;
 	cout << "1) View all books" << endl;
 	cout << "2) Search a book" << endl;
-	cout << "3) Borrow a book\n" << endl;
+	cout << "3) Borrow or Return a book\n" << endl;
 
 	cout << "You can choose from one of the options available" << endl;
 	cout << "Select 1, 2 or 3\n" << endl;
@@ -43,10 +43,9 @@ void Student::studentMenu()
 	else if (choice == 2) {
 		searchBook();
 	}
-	//else if (choice == 3) {
-	//	borrowBook();  //This function needs to be implemented in the Book Class. After it is implemented it
-	//				  //will be fixed 
-	//}
+	else if (choice == 3) {
+		Book book(name);
+	}
 
 	else {
 		cout << "\nWrong choice made!" << endl;
