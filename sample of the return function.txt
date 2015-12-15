@@ -1,0 +1,27 @@
+void Book::returnBook(string studentsName) { 
+56 	 
+57 	string name; 
+58 	cout << "Enter the name of the book to be returned " << endl; 
+59 	cin >> name; 
+60 	 
+61 	 ifstream file("borrowedBooks.txt");
+    if(file.is_open())
+    {
+        string myArray[2];
+
+        for(int i = 0; i < 2; ++i)
+        {
+            file >> myArray[i];
+        }
+ if( name == myArray[2] ){
+   string ret = "returned";
+        myArray[1] = ret;
+ }
+
+
+
+62 } 
+63 
+ 
+64 bool Book::searchForBook(string booksName) 
+65 { 
